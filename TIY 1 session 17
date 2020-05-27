@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char name1[20];
+    char name2[20];
+    char y;
+    printf("Enter string1: ");
+    scanf("%s",name1);
+    printf("Enter string2: ");
+    scanf("%s",name2);
+    
+    y = strstr(name1,name2);
+    if (y == NULL)
+    printf("Y");
+    else if (*name1==*name2)
+    printf("Y");
+    else
+    printf("N");
+
+}
