@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+struct nameprefix
+{
+    char name [20];
+    char prefix[20];
+};
+void main()
+{
+    struct nameprefix arr;
+    struct nameprefix ar[5];
+    int i;
+    printf("Enter prefix: ");
+    gets(arr.prefix);
+    for(i=0;i<5;i++)
+    {
+        printf("Enter name %d: ",i+1);
+        gets(ar[i].name);
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("\n%s %s",arr.prefix, ar[i].name);
+    }
+    
+    
+}
