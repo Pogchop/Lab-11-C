@@ -1,0 +1,49 @@
+#include <stdio.h>
+struct num
+{
+    int num1;
+    int num2;
+    int num3;
+    int num4;
+    int num5;
+};
+struct year
+{
+    int y1;
+    int y2;
+    int y3;
+    int y4;
+    int y5;
+};
+struct city
+{
+    char c[20];
+    struct year ye;
+    struct num n;
+};
+void main()
+{
+    struct city ar[5];
+    int i, avg[5];
+    for (i=0;i<5;i++)
+    {
+        printf("Enter city %d name: ",i+1);
+        scanf("%s",ar[i].c);
+        printf("Enter year and temp: ");
+        scanf("%d %d",&ar[i].ye.y1,&ar[i].n.num1);
+        printf("Enter year and temp: ");
+        scanf("%d %d",&ar[i].ye.y2,&ar[i].n.num2);
+        printf("Enter year and temp: ");
+        scanf("%d %d",&ar[i].ye.y3,&ar[i].n.num3);
+        printf("Enter year and temp: ");
+        scanf("%d %d",&ar[i].ye.y4,&ar[i].n.num4);
+        printf("Enter year and temp: ");
+        scanf("%d %d",&ar[i].ye.y5,&ar[i].n.num5);
+    }
+    for (i=0;i<5;i++)
+    {
+       avg[i]=(ar[i].n.num1+ar[i].n.num2+ar[i].n.num3+ar[i].n.num4+ar[i].n.num5);
+       printf("%s avg temp in 5 years: %d",ar[i].c,avg[i]);
+    }
+    
+}
